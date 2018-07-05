@@ -1,7 +1,6 @@
 # Command Line
 Being able to navigate the computer via the command line is essential.
 
-
 # High Level View of Django
 
 - User requests a URL
