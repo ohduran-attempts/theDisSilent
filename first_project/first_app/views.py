@@ -4,4 +4,7 @@ from django.http import HttpResponse
 
 def index(request):
     # each view must return an HTTPResponse
-    return HttpResponse("Hello, world!")
+    my_dictionary = {
+        'insert_me': "Hello, I am from views.py",
+    }
+    return render(request, 'index.html', context=my_dictionary)
