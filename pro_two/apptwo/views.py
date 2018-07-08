@@ -4,3 +4,9 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("<em>My Second App</em>")
+
+def help(request):
+    my_dictionary = {
+        'insert_me': "Hello, I am from views.py",
+    }
+    return render(request, 'apptwo/help.html', context=my_dictionary)
