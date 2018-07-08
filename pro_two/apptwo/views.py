@@ -6,7 +6,7 @@ def index(request):
     return HttpResponse("<em>My Second App</em>")
 
 def help(request):
-    my_dictionary = {
-        'insert_me': "Hello, I am from views.py",
+    helpdict = {
+        'help_insert': "HELP PAGE",
     }
-    return render(request, 'apptwo/help.html', context=my_dictionary)
+    return render(request, 'apptwo/help.html', context=helpdict)
