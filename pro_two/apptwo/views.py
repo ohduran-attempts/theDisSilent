@@ -10,3 +10,6 @@ def help(request):
         'help_insert': "HELP PAGE",
     }
     return render(request, 'apptwo/help.html', context=helpdict)
+
+def users(request):
+    return render(request, 'apptwo/users.html')

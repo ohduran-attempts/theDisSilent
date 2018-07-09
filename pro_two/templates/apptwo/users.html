@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfile %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Hi, welcome to Django Level Two Challenge</h1>
+        <h2>Here are your users:</h2>
+
+        <div class="djangotwo">
+            {% if users %}
+                <table>
+                    <thead>
+                        <th>User Name</th>
+                        <th>Email</th>
+
+                    </thead>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.first_name }}</td>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+            <p>NO USERS FOUND</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
