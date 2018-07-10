@@ -11,21 +11,15 @@ from faker import Faker
 
 fakegen = Faker()
 
-# def add_user():
-#     t = User.objects.get_or_create(top_name=random.choice(topics))[0]
-#     t.save()
-#     return t
-
 def populate(N=5):
 
     for entry in range(N):
 
-        # get the topic for the entry
-        # top = add_topic()
-
         # Create fake data
-        fake_first_name, fake_last_name = fakegen.name().split(" ")
-        fake_email = str(fake_first_name)+"@"+str(fake_last_name)+".com"
+        fake_name = fakegen.name().split()
+        fake_first_name = fake_name[0]
+        fake_last_name = fake_name[1]
+        fake_email = fakegen.email()
 
         # Create the new webpage entry
         user = User.objects.get_or_create(
