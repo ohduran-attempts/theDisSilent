@@ -7,4 +7,11 @@ def index(request):
 
 def form_name_view(request):
     form = forms.FormName()
+
+    if request.method == 'POST':
+        form = forms.FormName(request.POST)
+        if form.is_valid():
+            # Do something
+            print("Validation success!")
+            print("NAME: ",form.cleaned_data['name'])
     return render(request, 'basicapp/forms.html', {'form':form})
