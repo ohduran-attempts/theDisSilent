@@ -3,26 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>Users</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     </head>
     <body>
-        <h1>Hi, welcome to Django Level Two Challenge</h1>
-        <h2>Here are your users:</h2>
+        <div class="container">
+            <h1>Sign up here</h1>
+        </div>
 
-        <div class="djangotwo">
-            {% if users %}
-                <ol>
-                    {% for user in users %}
-                    <li>User Info</li>
-                    <ul>
-                        <li>First Name: {{ user.first_name }}</li>
-                        <li>Last Name: {{ user.last_name }}</li>
-                        <li>Email: {{ user.email }}</li>
-                    </ul>
-                    {% endfor %}
-                </ol>
-            {% else %}
-            <p>NO USERS FOUND</p>
-            {% endif %}
         </div>
     </body>
 </html>
