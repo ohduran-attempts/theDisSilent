@@ -9,9 +9,9 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li class="navbar-brand"><a href="#">BRAND</a></li>
-                    <li class="navbar-link"><a href="#">ADMIN</a></li>
-                    <li class="navbar-link"><a href="#">Other</a></li>
+                    <li class="navbar-brand"><a href="{% url 'index' %}">BRAND</a></li>
+                    <li class="navbar-link"><a href="{% url 'admin:index' %}">ADMIN</a></li>
+                    <li class="navbar-link"><a href="{% url 'basic_app:other' %}">Other</a></li>
                 </ul>
             </div>
         </nav>
