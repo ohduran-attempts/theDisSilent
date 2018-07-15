@@ -10,6 +10,15 @@ from django.contrib.auth import authenticate, login, logout
 def index(request):
     return render(request, 'basic_app/index.html')
 
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('index'))
+
+@login_required
+def special(request):
+    return HttpResponse('Cool, you are logged in!')
+
 def register(request):
     registered = False
 
