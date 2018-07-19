@@ -17,7 +17,9 @@ class IndexView(TemplateView):
 
 class SchoolListView(ListView):
     model = models.School
+    context_object_name = 'schools'
 
 class SchoolDetailView(DetailView):
     model = models.School
     template_name = 'basic_app/school_detail.html'
+    context_object_name = 'basic_app/school_detail.html'
