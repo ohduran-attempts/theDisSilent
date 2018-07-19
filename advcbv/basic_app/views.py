@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import (View, TemplateView, ListView, DetailView,
+                                                                    CreateView, UpdateView, DeleteView)
 from basic_app import models
 
 # Create your views here.
@@ -23,3 +24,7 @@ class SchoolDetailView(DetailView):
     model = models.School
     template_name = 'basic_app/school_detail.html'
     context_object_name = 'school_detail'
+
+class SchoolCreateView(CreateView):
+    fields = ('name', 'principal', 'location')
+    model = models.School
