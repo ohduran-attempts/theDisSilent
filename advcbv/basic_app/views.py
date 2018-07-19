@@ -22,4 +22,4 @@ class SchoolListView(ListView):
 class SchoolDetailView(DetailView):
     model = models.School
     template_name = 'basic_app/school_detail.html'
-    context_object_name = 'basic_app/school_detail.html'
+    context_object_name = 'school_detail'
